@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+h1, p
+{
+    text-align:center;
+}
+.contenedorOpcion
+{
+    text-align:center;
+}
+:root {
+
+    --font-Family-1: 'Rammetto One', sans-serif;
+    --font-Family-2: 'Poppins', sans-serif;
+    
+    --line-div: #D4E9E0;
+
+    --color-2: #345675;
+    --color-9: #517290;
+    --color-3: #F8FDFB;
+    
+    --color-5: #6BA4A4;
+    --color-8: #98F3C9;
+    --color-6: #22FBE2;
+    --color-7: #3BC691;
+    
+    --color-1: #FDC477;
+    --color-10: #F8AF9B;
+    --color-4: #FC8D72;
+}
+.title {
+    font-family: var(--font-Family-1);
+    font-weight: bold;
+    /*font-size: 5rem;*/
+    color: var(--color-9);
+}
