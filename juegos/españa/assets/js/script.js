@@ -236,13 +236,12 @@ function cuentaAtras() {
     gameOverSound.play();
 
     Swal.fire({
-      imageUrl:
-        "https://raw.githubusercontent.com/delmonicoCL/LaiaBCN/main/assets/images/tiempo3.png",
+      imageUrl:'assets/images/tiempo3.png',      
       imageWidth: 400,
       imageHeight: 480,
       color: "#716add",
 
-      background: "#fff url(:/assets/images/tiempo.png)",
+      background: "#fff url(assets/images/tiempo.png)",
 
       showCancelButton: true,
       confirmButtonColor: "#fc8d72",
@@ -283,7 +282,7 @@ function cuentaAtras() {
         //   timer:1500,
         // })
         setTimeout(() => {
-          window.location.href = "adios.html";
+          window.location.href = "adios.php";
         }, 1500);
       }
     });
@@ -300,13 +299,12 @@ function confirmarSalida() {
   salirSound.play();
   detenerTemporizador();
   Swal.fire({
-    imageUrl:
-      "https://raw.githubusercontent.com/delmonicoCL/LaiaBCN/main/assets/images/tiempo3.png",
+    imageUrl:'assets/images/tiempo3.png',
+     
     imageWidth: 400,
     imageHeight: 480,
     color: "#716add",
-    background:
-      "https://raw.githubusercontent.com/delmonicoCL/LaiaBCN/main/assets/images/salir.png",
+    background: "#fff url(assets/images/salir.png)",
 
     showCancelButton: true,
     confirmButtonColor: "#517290",
@@ -336,7 +334,7 @@ function confirmarSalida() {
       //   timer:1500,
       // })
       setTimeout(() => {
-        window.location.href = "adios.html";
+        window.location.href = "adios.php";
       }, 1500);
     } else {
       // Reanudar el tiempo si el usuario decide no salir
