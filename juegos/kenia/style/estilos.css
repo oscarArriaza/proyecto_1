@@ -1,0 +1,73 @@
+#contenedorPrincipal
+{
+    /*border:solid red;*/
+    width: 1340px;
+    display: grid;
+    grid-template-columns: repeat(67, 1fr);
+    gap: 0px;
+    /*border:solid blue;*/
+}
+#obstaculo
+{
+    width: 100%;
+    height: 20px;
+}
+#suelo
+{
+    width: 100%;
+    height: 20px;
+}
+#agua
+{
+    width: 100%;
+    height: 20px;
+}
+.personaje
+{
+    width: 60px;
+    height: 80px;
+    position: absolute;
+}
+#laia
+{
+    top: 61px;
+    left: 55px;
+    /*border:solid red;*/
+}
+.arbol
+{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+}
+.choza
+{
+    position: absolute;
+}
+#malik
+{
+    top: 61px;
+    left: 480px;
+    /*border:solid blue;*/
+}
+#matu
+{
+    top: 61px;
+    left: 1250px;
+}
+#morani
+{
+    top: 255px;
+    left:50px;
+}
+#kiano
+{
+    top: 455px;
+    left:1250px;
+}
+.aerogenerador
+{
+    width: 133px;
+    height: 299;
+    position: absolute;
+}
