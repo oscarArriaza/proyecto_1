@@ -52,7 +52,7 @@ integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cD
     </div>     
   </div>
 
-  <form action="./index.php" method="post" id="formularioPuntaje">
+  <form action="../../index.php" method="post" id="formularioPuntaje">
                     <label for="juego">
                         Juego:
                     </label>

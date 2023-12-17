@@ -384,7 +384,7 @@ function confirmarSalida() {
         timer:1500,
       })
       setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'index.php';
       }, 1500);
     }  else {
       // Reanudar el tiempo si el usuario decide no salir
