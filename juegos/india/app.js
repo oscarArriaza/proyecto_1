@@ -1,7 +1,7 @@
 
 let cartasFacil = [ 'laia1.png', 'alisha.png', 'laia1.png', 'alisha.png'];
 let cartasNormal = [ '8.png', '2.png', '18.png', '4.png', '8.png', '2.png', '18.png', '4.png'];
-let cartasDificil = ['elefante.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif',  'elefante.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif'];
+let cartasDificil = ['elefanteNew.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif',  'elefanteNew.gif', '3.gif', '4.gif', 'flor.gif', 'mujer.gif', 'sol.gif'];
 let indiceNivelActual = 0;
 const niveles = [cartasFacil, cartasNormal, cartasDificil];
 let tablero = document.getElementById('tablero');
