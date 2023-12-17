@@ -1,5 +1,0 @@
-¿Que sigue?
-1) Añadir a los npc.
-2) Añadir los obstaculos.
-3) Añadir los mensajes emergentes, pero estos no tienen que ser alerts por defecto del navegador.
-4)  
