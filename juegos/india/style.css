@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+*{
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+:root {
+  --bg_main: #F7F7F7;
+  --bg_main_2: #F5F5F5;
+  --bg_head: #629F91;
+  --fontText: 'Poppins', sans-serif;
+  --fontTitleH: 'Rammetto One', sans-serif;
+  --colorHead: #1E3932;
+  --colorHead2: #CEDFDF;
+  --colorHead3: #B1CFC8;
+  --bg-btn-play: #F79232;
+  --color-section-1: #FFCD1B;
+  --line-div: #D4E9E0;
+
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url('img/fondo.gif');
+  overflow: hidden;
+  background-size:cover;
+  background-position: center 25%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: url(img/cursor/default.png), auto;
+  
+}
+
+.cursor-mano {
+  cursor: url(img/cursor/manito.png), auto;
+}
+
+.boton{
+  font-size: 20px;
+  border: none;
+  width: 100px;
+  background-color:rgb(14, 79, 169, 0.5);
+  margin-top: 10px;
+  animation: entrada 1s ease-out;
+  font-family: var(--fontTitleH);
+  margin-right: 5px;
+}
+.boton:hover{
+  background-color:rgb(12, 70, 152);
+  color: #F7F7F7;
+  border: none;
+  cursor: url(img/cursor/manito.png), auto;
+}
+
+#botonReiniciar{
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: rgb(12, 70, 152);
+  
+}
+
+
+#botonReiniciar:hover{
+  color: rgb(0, 0, 0); 
+  cursor: url(img/cursor/manito.png), auto;
+}
+
+#botonSalir{
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: rgb(224, 14, 14);
+  cursor: url(img/cursor/manito.png), auto;
+}
+
+
+#botonSalir:hover{
+  color: #c39493; 
+  cursor: url(img/cursor/manito.png), auto;
+}
+#menu{
+  position:static;
+  background-color: rgb(252, 141, 114, 0.30);
+}
+.opciones{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0px 10px 0px 10px;
+  
+}
+
+
+.contador{
+  font-size: 30px;
+  color:var(--bg-btn-play);
+}
+.contador span{
+  font-size: 30px;
+}
+.juego {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 50%; 
+  padding: 20px;
+  margin: 0px 0px 50px 0px;
+  border-radius: 50px;
+}
+  
+.tablero{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap:5px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+.card {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;  
+    perspective: 1000px; 
+    
+  }
+
+.card:hover{
+  transform: scale(1.1);
+  cursor: url(img/cursor/manito.png), auto;
+}
+
+.container-fluid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+  justify-content: center;
+
+}
+
+.card .imagen-carta {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+  transition:  0.8s; 
+}
+
+.card.volteada .imagen-carta {
+  transform: rotateY(180deg);  
+}
+
+
+
+.mensaje-bienvenida {
+  position: absolute;
+  width: 40%;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  background-color: #1a1170;
+  color: white;
+  border-radius: 10px 100px 10px 100px;
+  font-family: var(--fontText);
+}
+.mensaje-bienvenida p{
+margin-top: 5px;
+}
+
+.custom-popup-class{
+  display:contents;
+  position: initial;
+  
+}
+
+
+
+
+  /* -------------------------------- ANIMACIONES JUEGO ----------------------------- */
+.reiniciar-animacion {
+    animation: reiniciar 1s; /* Duración de la animación: 1 segundo */
+}
+
+
+/* Agrega esto a tu CSS */
+@keyframes iluminar {
+  100% {
+    box-shadow: 0 0 10px 5px rgb(255, 255, 0); 
+  }  
+}
+
+.iluminar {
+  animation: iluminar 2s; /* Ajusta la duración según tus preferencias */
+}
+
+@keyframes iluminar-tablero {
+  100% {
+    box-shadow: 0 0 20px 15px yellow; 
+  }
+}
+
+.iluminar-tablero {
+  animation: iluminar 3s; /* Ajusta la duración según tus preferencias */
+}
+
+
+@keyframes reiniciar {
+  /* Definir la animacion de reiniciar el juego */
+  from {
+    /* Estado inicial de la animación */
+    transform: rotate(0deg);
+  }
+  to {
+    /* Estado final de la animación */
+    transform: rotate(360deg);
+  }
+}
+
+
+  
+/* Definir la animación de entrada */
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Para pantallas mas pequeñas */
+
+@media (max-width: 991px) {
+  .card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 24px;
+    cursor: pointer;  
+    perspective: 1000px; 
+  }
+  
+  
+
+  .juego {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%; /* Ajusta según sea necesario */
+  }
+  .opciones{
+    display: flex;
+    gap: 100px;
+    margin-right: 95px;
+  }
+  
+    
+}
