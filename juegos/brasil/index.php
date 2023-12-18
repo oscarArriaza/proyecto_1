@@ -142,7 +142,7 @@
                                         <div class="wordChoose">
                                             <!-- inner HTML -->
                                             <div class="inline-block">
-                                                <span>¿</span><p>Que significa</p><span>...</span>
+                                                <span>¿</span><p>Cómo se dice</p><span>...</span>
                                             </div>
                                             <h2 id="modal1-palabra"></h2>
                                             <div class="inline-block">
@@ -204,7 +204,7 @@
                                         <div class="wordChoose">
                                             <!-- inner HTML -->
                                             <div class="inline-block">
-                                                <span>¿</span><p>Que significa</p><span>...</span>
+                                                <span>¿</span><p>Cómo se dice</p><span>...</span>
                                             </div>
                                             <h2 id="modal2-palabra"></h2>
                                             <div class="inline-block">
@@ -266,7 +266,7 @@
                                         <div class="wordChoose">
                                             <!-- inner HTML -->
                                             <div class="inline-block">
-                                                <span>¿</span><p>Que significa</p><span>...</span>
+                                                <span>¿</span><p>Cómo se dice</p><span>...</span>
                                             </div>
                                             <h2 id="modal3-palabra"></h2>
                                             <div class="inline-block">
@@ -299,7 +299,7 @@
 
     <!-- Formulario de envio de puntos -->
     <div hidden>
-        <form action="../../php/insertarPuntuacion.php" method="post">
+        <form action="../../php/insertarPuntuacion.php" method="post" id="formularioPuntaje">
             <label for="juego">
                 Juego:
             </label>
@@ -315,7 +315,7 @@
             <label for="puntuacion">
                 Puntuacion:
             </label>
-            <input type="text" id="puntuacion" name="Puntuacion" value=5>
+            <input type="text" id="puntuacion" name="Puntuacion" value="">
             <br>
             <br>
             <input type="submit" name="Enviar" id="enviar" value="Enviar">

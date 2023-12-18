@@ -86,9 +86,8 @@ createMap(mapaGame);
 // Crear el elemento del personaje
 const personaje = document.createElement('div');
 personaje.className = 'character';
-//personaje.textContent = '👾';
 personaje.style.backgroundImage = 'url(./media/laia-gift/laia-down.gif)';
-personaje.style.backgroundSize = 'cover';
+personaje.style.backgroundPosition = 'center';
 personaje.style.backgroundRepeat = 'no-repeat';
 personaje.style.gridColumnStart = 3;
 personaje.style.gridRowStart = 3;
@@ -187,8 +186,41 @@ document.addEventListener('keydown', function(event) {
                 }
             });
         } else if (mapaGame[nuevaFila][nuevaColumna] === 'D') {
-            alert('salir del juego');
-            // realizar la accion de enviar el formulario oculto con los puntos obtenidos
+            // Verificar si se han completado las misiones
+            if (bombillasObtenidas.innerText !== '0' && cablesObtenidos.innerText !== '0' && panelesObtenidos.innerText !== '0') {
+                // Mostrar mensaje de salida
+                Swal.fire({
+                    title: '¡Felicidades!',
+                    text: 'Laia ha completado las misiones en Brasil.',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                }).then((result) => {
+                    // Redirigir al usuario a el index de la landing y enviar puntuaciones
+                    if (result.isConfirmed) {
+                        window.location.href = '../../index.php';
+                        puntajeForm.value = totalPuntos;
+                        document.getElementById('formularioPuntaje').submit();
+                    }
+                });
+            } else {
+                // Mostrar mensaje de que aún no se han completado las misiones y preguntar si quiere salir de todas formas
+                Swal.fire({
+                    title: 'Aún no has completado las misiones',
+                    text: '¿Quieres salir del mapa de todas formas?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Sí, salir',
+                    cancelButtonText: 'No, quedarme'
+                }).then((result) => {
+                    // Redirigir al usuario al index de la landing aunque no haya completado las misiones
+                    if (result.isConfirmed) {
+                        window.location.href = '../../index.php';
+                    } else {
+                        // Posicionar al personaje a la entrada del mapa
+
+                    }
+                });
+            }
         }
     }
 });
