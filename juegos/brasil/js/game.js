@@ -15,6 +15,7 @@ let panelesObtenidos = document.getElementById('panelesObtenidos');
 // Puntos Globales obtenidos 
 let totalPuntos = 0;
 let totalPuntosElem = document.getElementById('totalPuntos');
+let puntajeForm = document.getElementById('puntuacion');
 
 // Funcion principal para jugar
 function jugar(modalId) {
@@ -283,6 +284,17 @@ function mostrarResultado(finalizarJuego, modalId) {
         }
 
         reiniciarEstadoJuego();
+
+        // Verificar si se han completado las 3 misiones
+        if (bombillasObtenidas.innerText !== '0' && cablesObtenidos.innerText !== '0' && panelesObtenidos.innerText !== '0') {
+            // Mostrar mensaje de haber completado las misiones y dirigir al jugador a un punto del mapa
+            Swal.fire({
+                title: '¡Felicidades!',
+                text: 'Has completado todas las misiones. ¡Dirígete a la salida del mapa!',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+        }
 
     } else {
         mensaje = btnSelected && validarRespuesta(btnSelected, palabraElegida.palabra) ? 'Correcto...!' : 'Haz fallado!';
