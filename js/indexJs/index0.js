@@ -121,10 +121,14 @@ document.querySelectorAll('.menuIdioma .dropdown-item').forEach(item => {
         document.querySelector('#navbarIdioma').textContent = abbr;
 
         // Carga el archivo de idioma correspondiente
-        let idioma = this.id; 
-        fetch('/landingProyV2/lang/' + idioma + '.json')
+        let idioma = this.id;
+        let ruta = window.location.pathname.split('/');
+        ruta.pop(); // Elimina el nombre de la pagina actual
+        ruta.push('lang'); // Agrega 'lang' al final de la ruta
+        ruta.push(idioma + '.json'); // Agrega el nombre del archivo al final de la ruta
+        let rutaCompleta = ruta.join('/');
+        fetch(rutaCompleta)
         .then(response => response.json()).then(data => {
-            // 'data' es el objeto JSON que acabas de cargar
             // Actualiza el texto en tu página web
             document.querySelectorAll('[data-translate]').forEach(function(element) {
                 let key = element.getAttribute('data-translate');
