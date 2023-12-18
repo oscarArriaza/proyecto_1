@@ -219,16 +219,14 @@
             <h2 id="textIndu">रो श न</h2>
             <h1 id="textMain"> LAIA </h1>
             <!-- ens il·lumines -->
-            <h3 id="textSub">you enlighten us<span>?</span></h3>
+            <div class="textSub">
+            <h3 id="textSub">you enlighten us</h3><span>?</span>
+            </div>
           </div>
           
           <div class="btn-box">
-            <!-- Modal Action -->
-            <!--<a class="btn btn-animate" href="#roadmap" data-bs-toggle="modal" data-bs-target="#modalLogin">PLAY NOW</a>-->
-            <a class="btn btn-animate" href="#roadmap">PLAY NOW</a>
+            <a class="btn btn-animate" href="#roadmap" data-translate="jugar-ahora">PLAY NOW</a>
           </div>
-
-          <!-- data-bs-toggle="modal" data-bs-target="#modalLogin" -->
           
           <div class="divider-bottom">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -244,7 +242,7 @@
 
         <section class="roadmap" id="roadmap">
 
-          <h2 class="title" id="titleRoadmap">Start a campaing</h2>
+          <h2 class="title" id="titleRoadmap" data-translate="start-campaing">Start a campaing</h2>
           <div class="stages-container">
             <div class="row">
               <!-- Barcelona -->
@@ -287,8 +285,8 @@
 
             <div class="row">
               <div class="col-4 d-flex flex-column justify-content-center"> 
-                <h3>Who is</h3>
-                <h2 class="title">LAIA?</h2>
+                <h3 data-translate="who-is">Who is</h3>
+                <h2 class="title">LAIA ?</h2>
               </div>
               <div class="col-8 about-text">
                 <p>
@@ -331,7 +329,7 @@
         <!-- START CHARACTERS SECTION -->
 
         <section class="characters" id="characters">
-          <h2 class="title">Characters</h2>
+          <h2 class="title" data-translate="characters">Characters</h2>
           <div class="characters-container">
             <div class="row g-5">
               <div class="col-12 col-md-4">
@@ -393,8 +391,8 @@
               <div class="col col-md-6">
                 <!-- titulos encabezados de seccion -->
                 <div class="head-ranking">
-                  <h3>latest winners</h3>
-                  <h2 class="title">LeaderBoard</h2>
+                  <h3 data-translate="latest-winners">latest winners</h3>
+                  <h2 class="title" data-translate="leaderboard">LeaderBoard</h2>
                 </div>
               </div>
               <div class="col col-md-6">
@@ -443,7 +441,7 @@
         <!-- START TEAM SECTION -->
         <section class="team" id="team">
           <div class="container-fluid">
-            <h2 class="title">Developer Team</h2>
+            <h2 class="title" data-translate="dev-team">Developer Team</h2>
             <div class="equipo row">
               <div class="col-md-6 col-lg-3">
                 <div class="info-team">
@@ -496,16 +494,16 @@
             <div class="menu-footer">
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a href="#home" class="nav-link" aria-current="page">Home</a>
+                  <a href="#home" class="nav-link" aria-current="page" data-translate="inicio">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#roadmap" class="nav-link">Roadmap</a>
+                  <a href="#roadmap" class="nav-link" data-translate="roadmap">Roadmap</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#about" class="nav-link">About</a>
+                  <a href="#about" class="nav-link" data-translate="about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#ranking" class="nav-link">Ranking</a>
+                  <a href="#ranking" class="nav-link" data-translate="ranking">Ranking</a>
                 </li>
               </ul>
             </div>
